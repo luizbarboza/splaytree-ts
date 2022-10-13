@@ -1,11 +1,11 @@
-// splaytree-ts v1.0.0 Copyright (c) 2022, Luiz Felipe Machado Barboza
+// splaytree-ts v1.0.1 Copyright (c) 2022, Luiz Felipe Machado Barboza
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 typeof define === 'function' && define.amd ? define(['exports'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global["splaytree-ts"] = global["splaytree-ts"] || {}));
 })(this, (function (exports) { 'use strict';
 
-var version = "1.0.0";
+var version = "1.0.1";
 
 class SplayTreeNode {
     key;
@@ -444,7 +444,7 @@ class SplayTreeSet extends SplayTree {
         const compare = this.splay(element);
         if (compare != 0)
             this.addNewRoot(new SplayTreeSetNode(element), compare);
-        return this.root;
+        return this.root.key;
     }
     addAll(elements) {
         for (const element of elements) {

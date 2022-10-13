@@ -467,7 +467,7 @@ export class SplayTreeSet<E> extends SplayTree<E, SplayTreeSetNode<E>> implement
     addAndReturn(element: E) {
         const compare = this.splay(element);
         if (compare != 0) this.addNewRoot(new SplayTreeSetNode(element), compare);
-        return this.root;
+        return this.root!.key;
     }
 
     addAll(elements: Iterable<E>) {

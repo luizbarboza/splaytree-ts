@@ -435,7 +435,7 @@ export class SplayTreeSet extends SplayTree {
         const compare = this.splay(element);
         if (compare != 0)
             this.addNewRoot(new SplayTreeSetNode(element), compare);
-        return this.root;
+        return this.root.key;
     }
     addAll(elements) {
         for (const element of elements) {

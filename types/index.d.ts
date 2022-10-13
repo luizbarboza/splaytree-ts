@@ -68,7 +68,7 @@ export declare class SplayTreeSet<E> extends SplayTree<E, SplayTreeSetNode<E>> i
     deleteAll(elements: Iterable<unknown>): void;
     forEach(f: (element: E, element2: E, set: Set<E>) => void): void;
     add(element: E): this;
-    addAndReturn(element: E): SplayTreeSetNode<E> | null;
+    addAndReturn(element: E): E;
     addAll(elements: Iterable<E>): void;
     isEmpty(): boolean;
     isNotEmpty(): boolean;
