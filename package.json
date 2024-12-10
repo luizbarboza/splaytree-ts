@@ -36,7 +36,7 @@
   },
   "scripts": {
     "preversion": "npm run test",
-    "version": "npm run build && git add -A dist",
+    "version": "npm run build && git add -A",
     "postversion": "git push && git push --tags",
     "build": "rollup -c && tsup",
     "test": "npm run test:typecheck && npm run test:lint",
