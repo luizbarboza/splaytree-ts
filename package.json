@@ -35,7 +35,9 @@
     "url": "https://github.com/SBanksX/splaytree-ts.git"
   },
   "scripts": {
-    "prepublishOnly": "npm run test && npm run build",
+    "preversion": "npm run test",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags",
     "build": "rollup -c && tsc --declaration true --declarationDir types",
     "test": "npm run test:typecheck && npm run test:lint",
     "test:lint": "eslint src",
