@@ -7,19 +7,19 @@
   },
   "license": "BDS-3-Clause",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
   "jsdelivr": "dist/splaytree-ts.umd.js",
   "unpkg": "dist/splaytree-ts.umd.js",
-  "types": "types/index.d.ts",
+  "types": "dist/esm/index.d.ts",
   "exports": {
     "umd": "./dist/splaytree-ts.umd.js",
-    "default": "./dist/index.js"
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.cjs",
+    "default": "./dist/cjs/index.cjs"
   },
   "files": [
-    "dist/**/*.js",
-    "src/**/*.ts",
-    "types/**/*.d.ts"
+    "dist"
   ],
   "keywords": [
     "splay",
@@ -38,7 +38,7 @@
     "preversion": "npm run test",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags",
-    "build": "rollup -c && tsc --declaration true --declarationDir types",
+    "build": "rollup -c && tsup",
     "test": "npm run test:typecheck && npm run test:lint",
     "test:lint": "eslint src",
     "test:typecheck": "tsc --noEmit"
@@ -53,6 +53,7 @@
     "@rollup/plugin-typescript": "^8.5.0",
     "rollup-plugin-terser": "7",
     "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.5.0"
+    "eslint-config-prettier": "^8.5.0",
+    "tsup": "^8.3.5"
   }
 }
