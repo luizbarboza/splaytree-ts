@@ -32,7 +32,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/SBanksX/splaytree-ts.git"
+    "url": "https://github.com/luizbarboza/splaytree-ts.git"
   },
   "scripts": {
     "preversion": "npm run test",
