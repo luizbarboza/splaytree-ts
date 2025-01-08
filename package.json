@@ -5,7 +5,7 @@
   "author": {
     "name": "Luiz Felipe Machado Barboza"
   },
-  "license": "BDS-3-Clause",
+  "license": "BSD-3-Clause",
   "type": "module",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
